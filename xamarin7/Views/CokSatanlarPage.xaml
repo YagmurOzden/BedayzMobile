@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="xamarin7.Views.CokSatanlarPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="{DynamicResource NavigationPrimary}">
+
+                <StackLayout BackgroundColor="{StaticResource NavigationPrimary}" HeightRequest="250" Padding="5">
+                    <CarouselView x:Name="MainCarouselView" BackgroundColor="{StaticResource NavigationPrimary}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Frame IsClippedToBounds="True" Padding="0" VerticalOptions="FillAndExpand" >
+                                        <ImageButton Source="{Binding }"/>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+
+                    </CarouselView>
+
+                </StackLayout>
+
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

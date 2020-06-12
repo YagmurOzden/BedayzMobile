@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "xPE6z6rgDh/66cnV+Uw9PZJ9XIWOMTtwKFPGvS9p3Dp7RnVNBn6cAXPBlJbemXcbFE0dl+qPJf1xGw9vsmUUaw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bengu\\Desktop\\BedayzMobile-master\\xamarin7.Web\\xamarin7.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bengu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\Bengu\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\Bengu\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\Bengu\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

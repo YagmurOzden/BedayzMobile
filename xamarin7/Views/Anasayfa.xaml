@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             mc:Ignorable="d"
+             x:Class="xamarin7.Views.Anasayfa">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <!--Slider menü için-->
+            <StackLayout BackgroundColor="{DynamicResource NavigationPrimary}">
+               
+                <StackLayout BackgroundColor="{StaticResource NavigationPrimary}" HeightRequest="250" Padding="5">
+                    <CarouselView x:Name="MainCarouselView" BackgroundColor="{StaticResource NavigationPrimary}">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Frame IsClippedToBounds="True" Padding="0" VerticalOptions="FillAndExpand" >
+                                        <ImageButton Source="{Binding }"/>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+
+                    </CarouselView>
+
+                </StackLayout>
+                
+            </StackLayout>
+
+            <!--Butonlar için-->
+            <StackLayout>
+                
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+
+                </Grid.ColumnDefinitions>
+
+                <Button Text="En Çok Satanlar"
+                        FontSize="Micro"
+                x:Name="btn1"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="0"
+                Clicked="btn1_Clicked"/>
+
+         
+
+                <Button Text="T-Shirts"
+                        FontSize="Micro"
+                x:Name="btn2"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="1"
+                Clicked="btn2_Clicked"/>
+
+                <Button Text="Hoodies"
+                        FontSize="Micro"
+                 x:Name="btn3"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="2"
+                Clicked="btn3_Clicked"/>
+                
+
+                <Button Text="Aksesuar"
+                        FontSize="Micro"
+                       
+                 x:Name="btn4"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Grid.Row="0"
+                Grid.Column="3"
+                Clicked="btn4_Clicked"/>
+            </Grid>
+            </StackLayout>
+
+            <!--Ürünleri eklediğimiz stacklayoutumz-->
+            <StackLayout>
+                                    <!--1 sırada 2 tane ürün olduğu için 2 yaptık-->
+                <flv:FlowListView FlowColumnCount="2"   
+                                    SeparatorVisibility="Default"   
+                                    HasUnevenRows="True"  
+                                    FlowItemTappedCommand="{Binding ItemTappedCommand}"   
+                                    FlowItemsSource="{Binding Items}">      
+
+                    <flv:FlowListView.FlowColumnTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="White"  
+                                   Margin="5">
+                                <StackLayout>
+                                    <Image Source="{Binding ImageSource}"/>
+
+                                    <Label HorizontalOptions="Fill" TextColor="Black" XAlign="Center"  
+                                        YAlign="Center" Text="{Binding Ürünİsmi }"/>
+
+                                    <Label HorizontalOptions="Fill" TextColor="Black" XAlign="Center"  
+                                        YAlign="Center" Text="{Binding ÜrünEskiFiyatı}"/>
+
+                                    <Label HorizontalOptions="Fill" TextColor="Black" XAlign="Center"  
+                                        YAlign="Center" Text="{Binding ÜrünFiyatı}"/>
+                                </StackLayout>
+                                        
+                            </Frame>
+                        </DataTemplate>
+                    </flv:FlowListView.FlowColumnTemplate>
+                </flv:FlowListView>
+
+            </StackLayout>
+        </StackLayout>
+
+
+       
+
+
+    </ContentPage.Content>
+</ContentPage>
